@@ -1,0 +1,28 @@
+{
+  "name": "fullstackopen-part13",
+  "version": "0.0.1",
+  "description": "part-13",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmd-mish/fullstackopen-part13.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmd-mish/fullstackopen-part13/issues"
+  },
+  "homepage": "https://github.com/cmd-mish/fullstackopen-part13#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "pg": "^8.8.0",
+    "sequelize": "^6.24.0"
+  }
+}
