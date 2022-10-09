@@ -1,8 +1,12 @@
 const { Blog } = require('../models')
 
 const errorHandler = (error, req, res, next) => {
-  if (error.message === 'likes are missing') {
-    return res.status(403).json({ error: error.message })
+  console.log(error.message)
+  if (error.errors[0].validatorKey === 'isEmail') {
+    return res.status(400).json({ error: 'username must be a valid email' })
+  }
+  if (error.errors[0].validatorKey === 'not_unique') {
+    return res.status(400).json({ error: 'username is not unique' })
   }
 
   next(error)

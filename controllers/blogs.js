@@ -27,7 +27,7 @@ router.delete('/:id', blogFinder, async (req, res) => {
 router.put('/:id', blogFinder, async (req, res) => {
   if (req.blog) {
     if (!req.body.likes) {
-      throw Error('likes are missing')
+      return res.status(400).json({ error: 'likes are missing' })
     }
 
     req.blog.likes = req.body.likes
