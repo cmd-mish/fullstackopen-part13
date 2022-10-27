@@ -10,6 +10,9 @@ const errorHandler = (error, req, res, next) => {
   if (error.errors[0].validatorKey === 'not_unique') {
     return res.status(400).json({ error: 'username is not unique' })
   }
+  if (error.errors[0].validatorKey === 'min' || error.errors[0].validatorKey === 'max') {
+    return res.status(400).json({ error: 'year is out of range' })
+  }
 
   next(error)
 }

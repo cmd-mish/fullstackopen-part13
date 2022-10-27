@@ -1,9 +1,10 @@
 POST http://localhost:3001/api/blogs
 content-type: application/json
-authorization: bearer 
+authorization: bearer
 
 {
-  "author": "Test author 5",
+  "author": "Test author 3",
   "url": "http://example.com/",
-  "title": "Test title 5"
+  "title": "Test title 3",
+  "year": 1990
 }
