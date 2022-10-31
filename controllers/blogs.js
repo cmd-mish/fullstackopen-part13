@@ -52,7 +52,7 @@ router.delete('/:id', tokenExtractor, blogFinder, async (req, res) => {
   return res.status(404).end()
 })
 
-router.put('/:id', blogFinder, async (req, res) => {
+router.put('/:id', tokenExtractor, blogFinder, async (req, res) => {
   if (req.blog) {
     if (!req.body.likes) {
       return res.status(400).json({ error: 'likes are missing' })
